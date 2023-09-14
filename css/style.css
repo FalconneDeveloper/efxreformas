@@ -1,0 +1,530 @@
+/* Reset dos itens abaixo */
+body, p, h1, ul, li, blockquote {
+padding: 0px;
+margin:0px;
+} 
+
+body{
+	font-family: 'Vollkorn', Georgia, serif;
+
+}
+
+/* Resete no estilo da linha */
+
+li{
+	list-style: none;
+}
+
+/* Remoção dos links de "A" */
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	
+}
+
+html {
+	scroll-behavior: smooth;
+}
+/* GRID GERAL */
+
+.estrutura {
+	/* Como vou quere o site */
+	display: grid;
+
+	/* Quantas colunas vão ter o site (1fr 1 Fr 1 Fr) */
+	grid-template-columns: 1fr 5fr 1fr ;
+
+	/*Definição das Areas */
+	grid-template-areas: 
+	"header header header"
+	"bg-home bg-home bg-home"
+	"bg-home bg-home bg-home"
+	". content ."
+	"footer footer footer"
+	;
+}
+	
+		/*Style CSS */
+/* 1.0 - Inicio do Header */
+
+.header {
+	
+	position: fixed;
+	grid-area: header ;
+	/* Cor do menu header */
+	background: #1E2D3B;
+	display: grid;
+	grid-template-columns:  1fr auto;
+	align-items: center;
+	z-index: 20;
+	width: 100%;
+	
+}
+.header a{
+	padding: 0;
+}
+
+ .logo {
+	max-width: 150px;
+	
+}
+
+.header nav ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.header nav a {
+	display: block;
+	padding: 10px;
+	color: white;
+	font-size: 1em;
+	transition: 0.1s;
+}
+.header nav a:hover {
+	color:#EFB03D;
+}
+
+.header li + li {
+	margin-left: 20px;
+}
+
+/* Acabamos o Header */
+
+
+/* CONTENT */
+/*2.0 Comunicação com a Imagem do Background */
+.bg-home{
+	display: grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-area: bg-home;
+	background-image: url(/assets/imagens/containt/Content/guindaste.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 1000px;	
+	transition: 1.5s;
+	background-attachment: fixed;
+
+}
+/*final da comunicação com o background */
+
+/*2.1 Comunicação com o Texto principal*/
+.bg-home .h1-principal{
+	margin: 0 auto;
+	margin-top: 200px;
+	text-align: center;
+	color:rgb(255, 255, 255);
+	font-size: 3em;
+	max-width: 500px;
+}
+/* final texto principal */
+
+/* 2.2 Comunicação com o Link "Seta pra baixo" */
+.bg-home a{
+	margin: 0 auto;
+	margin-top: 50px;
+	text-align: center;
+	font-size: 2em;
+	max-width: 200px;
+	grid-column: 2 / 3;
+	grid-row: 2/3;
+	text-decoration: none;
+	color:#EFB03D
+}
+/* Final comunicação Seta pra baixo */
+
+/* 3.0 Inicio do Content (parte principal do site) */
+.content {
+	grid-area: content;
+	display: grid;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0px;
+	grid-gap:30px;
+	grid-template-columns: 3fr 3fr 3fr;
+		
+}
+
+/* 3.1 Estilo Content */
+.title h1{
+	margin-top: 100px;
+	font-size: 2.5em;
+	line-height: 1;
+	font-weight: 700;
+	
+}
+p { font-size: 1em;
+	line-height: 1.6;
+	letter-spacing: -0.005em;
+	color: rgba(0.0.0, .7);
+	
+}
+
+/* 3.2 Titulo Quem Somos*/
+.title , .title-quemSomos{
+	color:#000000;
+	padding: 20px;
+	text-align: center;
+	
+}
+/* 3.3 Falando com o H1 Quem Somos */
+.title-quemSomos h1{
+	text-align: center;
+	margin-top: 20px;
+	font-size: 2.75em;
+	line-height: 1;
+	font-weight: 700;
+}
+
+
+.title-quemSomos p{
+	margin-top: 20px;
+	text-align: left;
+	
+}
+/* Fim de Titulo e paragrafo de quem somos */
+
+/* 4.0 Estrutura dos Projetos */
+
+.estrutura-projeto {
+	display: grid;
+	grid-template-columns: 3fr 3fr;
+	grid-gap: 12px;
+	transition: 0.5s;
+	text-align: center;
+	align-items: center;
+	height: 500px;
+	
+}
+
+.projeto1 , .projeto2 ,.projeto3 , .projeto4{	
+	padding-top: 150px;
+	font-size: 1.5em;
+	text-decoration:  none;
+	height: 150px;
+
+} 
+/* FInal da Estrutura do Projeto */
+
+/* 4.1 Chamada dos Componentes (Projetos) */
+.projeto1{
+	background-image: url(/assets/imagens/containt/Projeto1/projeto1d.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	
+}
+
+.projeto2{
+	color: white !important;
+	background-image: url(/assets/imagens/containt/Projeto2/projeto2b.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.projeto3{
+	
+	background-image: url(/assets/imagens/containt/Projeto3/Projeto4d.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.projeto4{
+	background-image: url(/assets/imagens/containt/Projeto4/Projeto4a.jpeg);
+		background-repeat: no-repeat;
+		background-size: cover;
+}
+/* 4.2 Formatação Hover para os componentes */
+.projeto1:hover , .projeto2:hover ,.projeto3:hover , .projeto4:hover{	
+	opacity: 0.5;
+	font-size: 2.0em;
+	color:#000000;
+} 
+/* Finalização da chamada dos componentes do projeto */
+
+
+/* 5.0 Comunicação com os campos dos clientes */
+
+/* 5.1 Definição de Colunas no Campo dos Clientes */
+.content-cliente{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap:20px;
+	align-items: center;
+	margin-top: 50px;
+}
+
+/* 5.2 Ajuste no tamanho das imagens */
+.content-cliente img{
+	width: 100%;
+	height: 120px;
+	padding: 10px;
+}
+/* Finalização do Campo do Cliente */
+
+
+
+/* 6.0 Informações: Mapa, Contato e Redes Sociais*/
+/* 6.1 Comunicação com Titulo e Paragrafo */
+.informacoes h4{
+	text-align: center;
+	font-size: 1.6em;
+}
+
+.informacoes p {
+	text-align: center;
+	font-size: 1.2em;
+}
+/* FInal da Comunicação Titulo Paragrafo */
+
+/* 6.2 Comunicação com Content-Midia Social*/
+.content-midiaSocial{
+display:grid;
+grid-template-columns: 1fr 1fr 1fr;
+margin: 50px auto 0 auto;
+grid-gap: 10px;
+text-align: center;
+max-width: 300px;
+}
+/* Final do Content-midiaSocial */
+
+/* 6.3 Formatação Content-midiaSocial  IMG, LINK*/
+.content-midiaSocial img{
+margin: 0 auto;
+width: 50px;
+height: 50px;
+}
+
+#midiaSocial a{
+margin: auto;
+font-size: 1.2em;
+}
+/* Fim da Formatação content-midiaSocial */
+
+
+/* 7.0 FOOTER */
+.footer {
+	margin-top: 10px;
+	grid-area: footer;
+	background-color:#1E2D3B;
+	
+}
+.footer p {
+	color:aliceblue;
+	text-align: center;
+	padding: 30px;
+}
+/* FInal do Footer */
+
+/* 8.0 Classes de Formatação */
+
+.col-wide {
+	grid-column: 1 / -1;
+}
+.border{
+	background-color: #EFB03D;
+	width: 40px;
+	height: 10px;
+	margin-left: 45%;
+}
+.img-format{
+	height: 180px;
+	width: 100%;
+}
+.img-quemSomos{
+	grid-column: 2/-1;
+}
+.clientes{
+	margin-top: 100px;
+}
+
+iframe{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+/* Fim de Classes de formatação */
+
+
+
+/* 9.0 Formatação do Responsivo */
+
+/* Responsivo do Site */
+@media (max-width: 1000px) {
+.estrutura{
+/* grid-template-columns: minmax(160px, 1fr) 3fr; */
+grid-template-areas: 
+"header header header"
+"bg-home bg-home bg-home"
+". content ."
+"footer footer footer"
+;
+}
+nav ul li a{
+	font-size: 0.8em;
+}
+.content-midiaSocial img{
+ margin-bottom: 10px;
+}	
+.content-quemSomos{
+	grid-column: 1/-1;
+}
+.img-quemSomos{
+	grid-column: 1/-1;
+}
+
+.title-quemSomos h1{
+	grid-column: 1/-1;
+}
+
+.title-quemSomos p{
+	grid-column: 1/-1;
+}
+}
+
+
+/* Responsivo Mobie */
+@media (max-width: 650px) {
+	.estrutura{
+		grid-template-columns:1fr;
+		grid-template-areas: 
+		"header"
+		"bg-home"
+		"content"
+		"footer"
+		;
+	}
+
+	.estrutura .header {
+		width: 80px;
+		grid-template-columns: 1fr !important;
+		display: flex !important;
+		flex-direction: column; 
+		font-size: 10pt;		
+	}
+	.estrutura .logo {
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	.estrutura .logo a {
+		font-size: 0.75em;			
+	}
+	.estrutura .header li {
+		margin: 5px !important;
+		margin: 0 auto!important;
+	}
+
+	.header{
+		width: 100% !important;	
+	}
+
+	.bg-home{		
+	grid-template-columns:1fr!important;
+	grid-template-rows:1fr !important;
+	grid-area: bg-home;
+	height: 850px !important;	
+	}
+	.bg-home .h1-principal{
+		margin-top: 300px !important;
+		color:#EFB03D;
+		font-size: 1.9em !important;
+		width: 80% !important;
+		grid-column: 1 / -1;
+		text-align: center;
+				
+	}
+	.bg-home a{
+		margin-top:  -400px !important;
+		font-size: 1.7em !important;
+		grid-template-columns: 1fr!important;
+		grid-column: 1 / -1 !important;
+		
+	}
+	/* Formatação Especial */
+	.content-padding{
+		padding:  0 10px;
+	}
+.img-format{
+	padding: 2%;
+	width: 96%;
+	justify-items: center;
+}
+	/*  */
+	.content {
+		
+		width: 100% !important;
+		background: rgb(255, 255, 255) !important;
+		display:grid !important;
+		grid-template-columns: 1fr!important;
+		grid-gap:5px !important;
+		grid-column: 1 / -1 !important;
+		margin-top: 10px !important;
+	}
+
+	.img-quemSomos{
+		margin-top: 40px;
+		grid-column: 1 / -1 !important;
+		height: 400px;
+	}
+	.title  h1{
+	font-size: 1.75em !important;
+		
+	}
+
+	.title-quemSomos h1{
+		font-size: 1.75em !important;
+	}
+
+	.estrutura-projeto {
+		grid-template-columns: 1fr!important;
+		width: 100% !important;
+	}
+
+	.content-cliente{
+		display: grid;
+		grid-template-columns: 1fr 1fr!important;
+		grid-gap:5px !important;
+		
+	}
+	.content-cliente img{
+		width: 80% !important;
+		height: 40% !important;
+		padding: 10px;
+		
+	}
+
+	.clientes{
+		margin-top: 800px!important;
+	   }
+
+	 .informacoes p {
+	
+	width: 400px !important;
+	padding: 20px !important;
+		
+	font-size: 1em !important;
+	}
+
+	.contatoSocial{
+	max-width: 200px !important;
+	}
+
+	.contatoSocial img{
+		
+	width: 30px !important;
+	height: 30px !important;
+	margin-bottom: 10px !important;
+	}
+
+.footer {
+grid-area: footer;
+width: 100% !important;
+		
+	}
+
+}	
